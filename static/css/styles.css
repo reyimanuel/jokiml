@@ -1,0 +1,214 @@
+/* Umum */
+html, body {
+    font: 16px/1.6 Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+	height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.content {
+    flex: 1;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-color: #2196F3;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #1976D2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#brandname {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+header h2 {
+    margin: 5px 0 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* Form Container */
+.ml-container {
+    background: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.ml-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #2196F3;
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.5);
+}
+
+/* Tombol */
+.btn-info {
+    background-color: #2196F3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-info:hover {
+    background-color: #1976D2;
+    transform: scale(1.05); /* Efek membesar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-info:active {
+    background-color: #1565C0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #2196F3;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Container untuk hasil prediksi */
+.result-container {
+    text-align: center;
+    background: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.result-title {
+    color: #2196F3;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Teks hasil prediksi */
+.results h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.spam-text {
+    color: #e53935; /* Warna merah untuk spam */
+    animation: bounce 1s infinite alternate;
+}
+
+.ham-text {
+    color: #1e88e5; /* Warna biru untuk aman */
+}
+
+/* Tombol Kembali */
+.btn-back {
+    display: inline-block;
+    background-color: #4CAF50; /* Hijau untuk tombol */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Efek membesar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-back:active {
+    background-color: #388E3C;
+}
+
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .ml-container, .result-container {
+        padding: 20px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    .btn-info {
+        width: 100%;
+        padding: 12px 0;
+    }
+}

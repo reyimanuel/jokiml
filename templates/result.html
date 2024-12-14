@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Prediksi</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header>
+        <div class="container">
+          <div id="brandname">Project Machine Learning</div>
+          <h2>Deteksi Spam untuk Komentar YouTube</h2>
+        </div>
+      </header>
+
+      <!-- Konten Utama -->
+      <main class="content">
+        <section class="result-container">
+          <article>
+            <p class="result-title">
+              <b>Hasil Prediksi untuk Komentar Anda</b>
+            </p>
+            <div class="results">
+              {% if prediction == 1 %}
+              <h2 class="spam-text">Spam</h2>
+              {% elif prediction == 0 %}
+              <h2 class="ham-text">Bukan Spam (Komentar Aman)</h2>
+              {% endif %}
+            </div>
+            <a href="/" class="btn-back">Kembali ke Halaman Home</a>
+          </article>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2024 Aplikasi Project Machine Learning || Jonathan Pessak 220211060???</p>
+      </footer>
+    </div>
+  </body>
+</html>
